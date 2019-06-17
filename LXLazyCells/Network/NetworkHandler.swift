@@ -8,10 +8,7 @@
 
 import Foundation
 
-public typealias ResponseHandler = (((Result<(URLResponse, Data), Error>)) -> Void)
-
 public class NetworkHandler {
-
     var pageSize: Int
     
     init(pageSize: Int) {
@@ -26,6 +23,7 @@ public class NetworkHandler {
         return NetworkOperation(getUrlforPage(pageNumber: page), completion:completion )
     }
     
+    /*Get URL specific to the partial tableview page load*/
     private func getUrlforPage(pageNumber: Int) -> URL {
         let pathForPage = "/walmartproducts/\(pageNumber)/\(pageSize)"
         return URL(string: pathForPage, relativeTo: NetworkHandler.baseURL)!

@@ -7,12 +7,8 @@
 //
 
 import UIKit
+/*Kingfisher framework for image caching operation*/
 import Kingfisher
-
-protocol DetailViewControllerDelegate: AnyObject{
-    func moveForwardToIndex(_ index: IndexPath)
-    func moveBackwardToIndex(_ index: IndexPath)
-}
 
 class DetailViewController: UIViewController, UIGestureRecognizerDelegate, ContainerOperationConfigurable {
     @IBOutlet weak var nameLabel: UILabel!
@@ -20,7 +16,10 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate, Conta
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var shortDescLabel: UILabel!
     @IBOutlet weak var lognDescLabel: UILabel!
+    @IBOutlet weak var inStockLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     private weak var operation: Operation?
+    // When new product is set, reload the page automatically
     var detailItem: Product? {
         didSet{
             if self.viewIfLoaded?.window != nil {
@@ -61,18 +60,24 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate, Conta
                 self.shortDescLabel.font = UIFont.LXBook(size: LazyCellConstants.bodyFontSize)
                 self.lognDescLabel.attributedText = detail.longDescription
                 self.lognDescLabel.font = UIFont.LXBook(size: LazyCellConstants.bodyFontSize)
-
+                self.inStockLabel.text = detail.inStock ? "In stock" : "Out of stock"
+                self.priceLabel.text = detail.price
+                self.priceLabel.font = UIFont.LXBold(size: LazyCellConstants.titleFontSize)
+                self.inStockLabel.textColor = detail.inStock ? UIColor.LXBlue() : UIColor.LXGrey()
+                self.inStockLabel.font = UIFont.LXLight(size: LazyCellConstants.subTitleFontSize)
                 self.view.layoutSubviews()
             }
         }
     }
 
     func  resetView()  {
-        self.nameLabel.text = nil
+        self.nameLabel.text = String.emptyString
         self.productImageView.image  = nil
-        self.ratingLabel.text =  nil
+        self.ratingLabel.text = String.emptyString
         self.shortDescLabel.attributedText = nil
         self.lognDescLabel.attributedText = nil
+        self.priceLabel.text = String.emptyString
+        self.inStockLabel.text = String.emptyString
     }
     
     override func viewDidLoad() {
@@ -87,19 +92,22 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate, Conta
         view.addGestureRecognizer(rightSwipe)
     }
     
+    /*
+        Swipe action
+        On swipe to unloaded item index, fetch operation is initated automatically for next page size
+        on next page fetch, detail view UI is reloaded
+     */
     @objc private func swipeAction(_ sender: UIGestureRecognizer){
         guard let sender = sender as? UISwipeGestureRecognizer else{
             return
         }
         if sender.direction == .right{
             guard currentIndexPath.row >= 1 else { return }
-            print("swipe right to get  \(currentIndexPath.row - 1)")
             if let nextproduct = dataController.item(for: IndexPath(row: currentIndexPath.row - 1, section: currentIndexPath.section)){
                 currentIndexPath.row = currentIndexPath.row - 1
                 detailItem = nextproduct
             }
         }else if sender.direction == .left{
-            print("swipe left to get  \(currentIndexPath.row + 1)")
             let newIndex = IndexPath(row: currentIndexPath.row + 1, section: currentIndexPath.section)
             guard newIndex.row < totalProducts else { return }
             if let prevproduct = dataController.item(for: newIndex){
@@ -116,7 +124,10 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate, Conta
     func configure(with product: Product?) {
         self.detailItem = product
     }
-    
+    /*
+     Creating a dependency operation to Upadte UI (configureView())
+     after the fetching data operation is completed
+     */
     func addOperation(updateOp: Operation, dependingOn currOp: Operation) {
         if let _  = operation{
             cancelPendingOperations()

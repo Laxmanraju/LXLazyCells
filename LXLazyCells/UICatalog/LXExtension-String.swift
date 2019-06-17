@@ -15,9 +15,4 @@ public extension String {
             return ""
         }
     }
-    static var whiteSpace : String {
-        get {
-            return " "
-        }
-    }
 }

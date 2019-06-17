@@ -14,7 +14,7 @@ class DataController: NSObject {
         case success(Count: Int)
         case error
     }
-    
+    // fetching 8 items in a call
     private static let pageSize: Int = 8
     private let network: NetworkHandler
     public static let sharedDataController = DataController()
@@ -55,6 +55,9 @@ class DataController: NSObject {
         lazyQueue.addOperation(initialOperation)
     }
     
+    /*
+     every operation has 
+     */
     func populateDataFor(container : ContainerOperationConfigurable, for index: IndexPath)  {
         let state = self.fetchState(for: index)
         switch state {

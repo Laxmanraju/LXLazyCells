@@ -10,15 +10,14 @@ import UIKit
 import Kingfisher
 
 class MasterViewController: UITableViewController {
-
     var detailViewController: DetailViewController? = nil
-    var objects = [Any]()
     var dataController: DataController
+    // total products count from URL respone
     var totalProducts  = 0
+    // View to place over table View
     let loadingView = UIView()
     /// Spinner shown during load the TableView
     let spinner = UIActivityIndicatorView()
-    
     /// Text shown during load the TableView
     let loadingLabel = UILabel()
 
@@ -60,6 +59,9 @@ class MasterViewController: UITableViewController {
     }
 
     private func registerNotifications(){
+        // Recieves notification on initial API call response
+        // Reload table view on successs
+        // Configure detailView Controller for iPAD version with first product
         NotificationCenter.default.addObserver(forName: LazyCellConstants.initialFetchNotificationName, object: nil, queue: .main) { [weak self] (_) in
             guard let strongSelf = self else {return}
             if case .error = strongSelf.dataController.initialFetchStatus{
@@ -94,7 +96,6 @@ class MasterViewController: UITableViewController {
     
     // Set the activity indicator into the main view
     private func setLoadingScreen() {
-        
         // Sets the view which contains the loading text and the spinner
         let width: CGFloat = 120
         let height: CGFloat = 30
@@ -122,14 +123,12 @@ class MasterViewController: UITableViewController {
     
     // Remove the activity indicator from the main view
     private func removeLoadingScreen() {
-        // Hides and stops the text and the spinner
         spinner.stopAnimating()
         spinner.isHidden = true
         loadingLabel.isHidden = true
     }
 }
 
-// TableView methods
 extension  MasterViewController{
     // MARK: - Table View
     

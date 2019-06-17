@@ -7,9 +7,12 @@
 //
 
 import UIKit
+/*Kingfisher framework for image caching operation*/
 import Kingfisher
 
-
+/*
+ Protocol to confirm to, to enable the reload of container(tableViewCell/DetailedView) elemetns after their content is fetched
+ */
 protocol  ContainerOperationConfigurable {
     func  configure(with product: Product?)
     func  addOperation(updateOp: Operation, dependingOn currOp:Operation)
@@ -48,24 +51,25 @@ class ProductCell: UITableViewCell, ContainerOperationConfigurable {
         specialDetailsLabel.attributedText = product.shortDescription
         specialDetailsLabel.font = UIFont.LXBook(size: LazyCellConstants.subTitleFontSize)
         ratingLabel.text = "Rating \(product.reviewRating.getCleanDecimalString())/5 (\(product.reviewCount) \(product.reviewCount > 1 ? "reveiws": "review"))"
-        ratingLabel.font = UIFont.LXBook(size: LazyCellConstants.bodyFontSize)
+        ratingLabel.textColor = UIColor.LXGrey()
+        ratingLabel.font = UIFont.LXMedium(size: LazyCellConstants.bodyFontSize)
         productImageView?.kf.setImage(with: product.imageUrl)
         self.setNeedsLayout()
     }
     
     private func resetCell(){
-        productNameLabel.text = " "
-        priceLabel.text = " "
-        specialDetailsLabel.text = " "
-        ratingLabel.text = " "
+        productNameLabel.text = String.emptyString
+        priceLabel.text = String.emptyString
+        specialDetailsLabel.text = String.emptyString
+        ratingLabel.text = String.emptyString
         productImageView.image = nil
     }
     
     func configureWithPlaceHolder()  {
-        productNameLabel.text = " "
-        priceLabel.text = " "
-        specialDetailsLabel.text = " "
-        ratingLabel.text = " "
+        productNameLabel.text = String.emptyString
+        priceLabel.text = String.emptyString
+        specialDetailsLabel.text = String.emptyString
+        ratingLabel.text = String.emptyString
     }
     
     func addOperation(updateOp: Operation, dependingOn currOp: Operation) {

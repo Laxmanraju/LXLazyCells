@@ -8,6 +8,12 @@
 
 import Foundation
 
+/*
+ Operaton to feth the products for page size- has threee states
+ --Initaly ProductStatus is initalized with .notStarted state
+ --When making API call it changes to .inProgress state, with its operation instance
+ --When API is success(product), the Product is initalized and replaced with inprogress item in array
+ */
 enum ProductStatus{
     case notStarted
     case inProgress(Operation)
@@ -46,7 +52,7 @@ class Product{
     }
     
     var imageUrl: URL? {
-        return URL(string: entity.productImage ?? "", relativeTo: NetworkHandler.baseURL)!
+        return URL(string: entity.productImage ?? String.emptyString, relativeTo: NetworkHandler.baseURL)!
     }
     
     var shortDescription: NSAttributedString? {
@@ -58,6 +64,7 @@ class Product{
         guard let longDescription = entity.longDescription else {return nil}
         return convertToAttributedHTML(longDescription)
     }
+    
     private func convertToAttributedHTML(_ input: String) -> NSAttributedString? {
         if let inputData = input.data(using: .utf8),
             let attr = try? NSMutableAttributedString(
@@ -67,15 +74,5 @@ class Product{
             return attr as NSAttributedString
         }
         return nil
-//        if let inputData = input.data(using: .utf8){
-//            do {
-//                return try NSAttributedString(data: inputData, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
-//            } catch {
-//                print("error:", error)
-//                return  nil
-//            }
-//        }
-//        return nil
-   
     }
 }

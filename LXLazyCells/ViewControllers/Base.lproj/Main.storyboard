@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-aB-J37">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="419"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="484.66666666666669"/>
                                         <subviews>
                                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Loadin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
                                                 <rect key="frame" x="30" y="30" width="315" height="20.333333333333329"/>
@@ -53,14 +53,26 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gor-cI-puM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfS-WP-SeO">
                                                 <rect key="frame" x="30" y="328.33333333333331" width="315" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-bW-CZv">
+                                                <rect key="frame" x="30" y="353.66666666666669" width="315" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gor-cI-puM">
+                                                <rect key="frame" x="30" y="394" width="315" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amg-TN-tPA">
-                                                <rect key="frame" x="30" y="368.66666666666669" width="315" height="20.333333333333314"/>
+                                                <rect key="frame" x="30" y="434.33333333333337" width="315" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -79,16 +91,23 @@
                                             <constraint firstItem="uaf-Op-7Xd" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="17.666666666666671" id="4Ar-JK-yCa"/>
                                             <constraint firstItem="PlA-vx-JWs" firstAttribute="top" secondItem="uaf-Op-7Xd" secondAttribute="bottom" constant="20" id="7Fe-QN-XZt"/>
                                             <constraint firstItem="Gor-cI-puM" firstAttribute="trailing" secondItem="PlA-vx-JWs" secondAttribute="trailing" id="8cE-BC-oyg"/>
+                                            <constraint firstItem="TfS-WP-SeO" firstAttribute="top" secondItem="PlA-vx-JWs" secondAttribute="bottom" constant="20" id="BML-9a-z2h"/>
                                             <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="30" id="CJa-tg-baE"/>
                                             <constraint firstAttribute="trailing" secondItem="PlA-vx-JWs" secondAttribute="trailing" constant="30" id="CX4-py-QGt"/>
+                                            <constraint firstItem="TfS-WP-SeO" firstAttribute="leading" secondItem="PlA-vx-JWs" secondAttribute="leading" id="D95-UJ-h3S"/>
                                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="Q4j-aB-J37" secondAttribute="leading" constant="30" id="GMO-cI-8hi"/>
                                             <constraint firstItem="PlA-vx-JWs" firstAttribute="leading" secondItem="uaf-Op-7Xd" secondAttribute="leading" id="GWe-EW-cD2"/>
+                                            <constraint firstItem="Gor-cI-puM" firstAttribute="top" secondItem="RqJ-bW-CZv" secondAttribute="bottom" constant="20" id="Ggx-Oo-lr1"/>
+                                            <constraint firstItem="RqJ-bW-CZv" firstAttribute="leading" secondItem="PlA-vx-JWs" secondAttribute="leading" id="Gzi-bR-Cu9"/>
                                             <constraint firstItem="uaf-Op-7Xd" firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" id="HYN-jX-eea"/>
                                             <constraint firstItem="amg-TN-tPA" firstAttribute="centerX" secondItem="Q4j-aB-J37" secondAttribute="centerX" id="KLu-6f-atP"/>
                                             <constraint firstItem="amg-TN-tPA" firstAttribute="top" secondItem="Gor-cI-puM" secondAttribute="bottom" constant="20" id="Kr9-Vi-iew"/>
+                                            <constraint firstItem="RqJ-bW-CZv" firstAttribute="top" secondItem="TfS-WP-SeO" secondAttribute="bottom" constant="5" id="Nfu-4A-M13"/>
+                                            <constraint firstItem="RqJ-bW-CZv" firstAttribute="trailing" secondItem="PlA-vx-JWs" secondAttribute="trailing" id="TjL-xt-jjT"/>
                                             <constraint firstItem="uaf-Op-7Xd" firstAttribute="centerX" secondItem="Q4j-aB-J37" secondAttribute="centerX" id="V2k-qe-CbV"/>
                                             <constraint firstItem="PlA-vx-JWs" firstAttribute="centerX" secondItem="Q4j-aB-J37" secondAttribute="centerX" id="VK7-bd-FMh"/>
                                             <constraint firstItem="PlA-vx-JWs" firstAttribute="trailing" secondItem="uaf-Op-7Xd" secondAttribute="trailing" id="aCP-PI-Hcu"/>
+                                            <constraint firstItem="TfS-WP-SeO" firstAttribute="trailing" secondItem="PlA-vx-JWs" secondAttribute="trailing" id="ggn-QU-x1t"/>
                                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerX" secondItem="Q4j-aB-J37" secondAttribute="centerX" id="gpT-3U-Tdd"/>
                                             <constraint firstItem="Gor-cI-puM" firstAttribute="leading" secondItem="PlA-vx-JWs" secondAttribute="leading" id="mVC-UX-CeT"/>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1200" id="nQm-Nf-xIO"/>
@@ -96,7 +115,6 @@
                                             <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="Q4j-aB-J37" secondAttribute="top" constant="30" id="pQe-BX-5Bv"/>
                                             <constraint firstItem="amg-TN-tPA" firstAttribute="leading" secondItem="Gor-cI-puM" secondAttribute="leading" id="t1M-9Y-sND"/>
                                             <constraint firstItem="Gor-cI-puM" firstAttribute="centerX" secondItem="Q4j-aB-J37" secondAttribute="centerX" id="u2j-f3-CYu"/>
-                                            <constraint firstItem="Gor-cI-puM" firstAttribute="top" secondItem="PlA-vx-JWs" secondAttribute="bottom" constant="20" id="v2p-HX-JlX"/>
                                             <constraint firstItem="PlA-vx-JWs" firstAttribute="leading" secondItem="Q4j-aB-J37" secondAttribute="leading" constant="30" id="wRy-mC-DsP"/>
                                         </constraints>
                                     </view>
@@ -123,8 +141,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
+                        <outlet property="inStockLabel" destination="RqJ-bW-CZv" id="HvD-gC-nCD"/>
                         <outlet property="lognDescLabel" destination="amg-TN-tPA" id="qyQ-32-73Q"/>
                         <outlet property="nameLabel" destination="0XM-y9-sOw" id="kv5-Js-Wik"/>
+                        <outlet property="priceLabel" destination="TfS-WP-SeO" id="VFs-JE-YIW"/>
                         <outlet property="productImageView" destination="uaf-Op-7Xd" id="o8k-xQ-Zux"/>
                         <outlet property="ratingLabel" destination="PlA-vx-JWs" id="VLT-zk-wjA"/>
                         <outlet property="shortDescLabel" destination="Gor-cI-puM" id="YEQ-AA-l1W"/>

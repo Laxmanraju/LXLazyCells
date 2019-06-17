@@ -7,21 +7,19 @@
 //
 
 import Foundation
-
-protocol ResponseParsable {
-    init(result:ResultType)
-}
-
-
-enum ProductResponseParser:ResponseParsable {
+/*
+ enum to parse and store the response on success
+ error on failure
+ */
+enum ProductResponseParser {
     case error
     case succcess(totalProducts: Int, productsList: [ProductEntity])
     
     init(result: ResultType) {
         switch  result {
-        case .failure(let error):
+        case .failure( _):
             self =  .error
-        case .success(let response, let data):
+        case .success( _, let data):
             do{
                 let parsedResponse = try JSONDecoder().decode(ProductResponse.self, from: data)
                 self = .succcess(totalProducts: parsedResponse.totalProducts, productsList: parsedResponse.products)

@@ -9,8 +9,8 @@
 import Foundation
 
 public extension Double {
-    public func getCleanDecimalString() ->String{
-        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
+    func getCleanDecimalString() ->String{
+        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(format: "%.1f", self)
     }
 }
 

@@ -15,7 +15,6 @@
 		0CA8844A22AD97F200285409 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8844822AD97F200285409 /* ProductCell.swift */; };
 		0CA8844F22AE208A00285409 /* LXExtension-UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8844E22AE208A00285409 /* LXExtension-UIFont.swift */; };
 		0CA8845122AE20C300285409 /* LXExtension-UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8845022AE20C300285409 /* LXExtension-UIColor.swift */; };
-		0CA8845322AE214E00285409 /* LXExtension-NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8845222AE214E00285409 /* LXExtension-NSAttributedString.swift */; };
 		0CA8845522AE218000285409 /* LXExtension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8845422AE218000285409 /* LXExtension-String.swift */; };
 		0CAE45AB22B731BD00414369 /* LXExtension-Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE45AA22B731BD00414369 /* LXExtension-Double.swift */; };
 		0CAEA28022A9DE3E00DF12B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEA27F22A9DE3E00DF12B3 /* AppDelegate.swift */; };
@@ -27,7 +26,7 @@
 		0CAEA29722A9DE3F00DF12B3 /* LXLazyCellsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEA29622A9DE3F00DF12B3 /* LXLazyCellsTests.swift */; };
 		0CB2B09F22A9E47A0035545C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB2B09E22A9E47A0035545C /* DataController.swift */; };
 		0CC5AC4D22AAFE2E00DF6ED7 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5AC4C22AAFE2E00DF6ED7 /* NetworkOperation.swift */; };
-		CF3CFEB677B2CB6FA506EFBA /* Pods_LXLazyCells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53951419E5804FDAF8DDE0A8 /* Pods_LXLazyCells.framework */; };
+		85E2792C95018D07E59529D8 /* Pods_LXLazyCells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E817C8F03CC26E8F0D839CC /* Pods_LXLazyCells.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08795886F05E23DE90637AC5 /* Pods-LXLazyCells.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXLazyCells.release.xcconfig"; path = "Pods/Target Support Files/Pods-LXLazyCells/Pods-LXLazyCells.release.xcconfig"; sourceTree = "<group>"; };
 		0C26E18B22AAF12000B6878D /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		0C2E5AF922AB3FD300754A86 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0CA8843E22AC98EE00285409 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
@@ -50,7 +48,6 @@
 		0CA8844822AD97F200285409 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		0CA8844E22AE208A00285409 /* LXExtension-UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-UIFont.swift"; sourceTree = "<group>"; };
 		0CA8845022AE20C300285409 /* LXExtension-UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-UIColor.swift"; sourceTree = "<group>"; };
-		0CA8845222AE214E00285409 /* LXExtension-NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-NSAttributedString.swift"; sourceTree = "<group>"; };
 		0CA8845422AE218000285409 /* LXExtension-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-String.swift"; sourceTree = "<group>"; };
 		0CAE45AA22B731BD00414369 /* LXExtension-Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-Double.swift"; sourceTree = "<group>"; };
 		0CAEA27C22A9DE3E00DF12B3 /* LXLazyCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXLazyCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,8 +63,9 @@
 		0CAEA29822A9DE3F00DF12B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB2B09E22A9E47A0035545C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		0CC5AC4C22AAFE2E00DF6ED7 /* NetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
-		53951419E5804FDAF8DDE0A8 /* Pods_LXLazyCells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXLazyCells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F468E9854F947DDC2017088C /* Pods-LXLazyCells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXLazyCells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LXLazyCells/Pods-LXLazyCells.debug.xcconfig"; sourceTree = "<group>"; };
+		7E817C8F03CC26E8F0D839CC /* Pods_LXLazyCells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXLazyCells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55B445BFF7F0FEEC1BD2CFD /* Pods-LXLazyCells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXLazyCells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LXLazyCells/Pods-LXLazyCells.debug.xcconfig"; sourceTree = "<group>"; };
+		E7169E0D1739033AA6656D7D /* Pods-LXLazyCells.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXLazyCells.release.xcconfig"; path = "Pods/Target Support Files/Pods-LXLazyCells/Pods-LXLazyCells.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF3CFEB677B2CB6FA506EFBA /* Pods_LXLazyCells.framework in Frameworks */,
+				85E2792C95018D07E59529D8 /* Pods_LXLazyCells.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +102,6 @@
 			children = (
 				0CA8844E22AE208A00285409 /* LXExtension-UIFont.swift */,
 				0CA8845022AE20C300285409 /* LXExtension-UIColor.swift */,
-				0CA8845222AE214E00285409 /* LXExtension-NSAttributedString.swift */,
 				0CA8845422AE218000285409 /* LXExtension-String.swift */,
 				0CAE45AA22B731BD00414369 /* LXExtension-Double.swift */,
 			);
@@ -117,8 +114,8 @@
 				0CAEA27E22A9DE3E00DF12B3 /* LXLazyCells */,
 				0CAEA29522A9DE3F00DF12B3 /* LXLazyCellsTests */,
 				0CAEA27D22A9DE3E00DF12B3 /* Products */,
-				6420D9AD67B5789ACD551724 /* Pods */,
-				FF7D9E74A93A065768B477A7 /* Frameworks */,
+				C34832256F0CE33079A3F614 /* Pods */,
+				DEDB397CE5E9829008430DEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,7 +133,7 @@
 			children = (
 				0CAEA27F22A9DE3E00DF12B3 /* AppDelegate.swift */,
 				0C26E18A22AAF0F000B6878D /* Network */,
-				0CB2B09A22A9E3B20035545C /* Views */,
+				0CB2B09A22A9E3B20035545C /* ViewControllers */,
 				0CB2B09D22A9E4530035545C /* Model */,
 				0CA8844D22AE203900285409 /* UICatalog */,
 				0C2E5AF922AB3FD300754A86 /* Constants.swift */,
@@ -156,7 +153,7 @@
 			path = LXLazyCellsTests;
 			sourceTree = "<group>";
 		};
-		0CB2B09A22A9E3B20035545C /* Views */ = {
+		0CB2B09A22A9E3B20035545C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				0CAEA28122A9DE3E00DF12B3 /* MasterViewController.swift */,
@@ -164,7 +161,7 @@
 				0CA8844822AD97F200285409 /* ProductCell.swift */,
 				0CAEA28522A9DE3E00DF12B3 /* Main.storyboard */,
 			);
-			path = Views;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		0CB2B09D22A9E4530035545C /* Model */ = {
@@ -177,19 +174,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6420D9AD67B5789ACD551724 /* Pods */ = {
+		C34832256F0CE33079A3F614 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F468E9854F947DDC2017088C /* Pods-LXLazyCells.debug.xcconfig */,
-				08795886F05E23DE90637AC5 /* Pods-LXLazyCells.release.xcconfig */,
+				D55B445BFF7F0FEEC1BD2CFD /* Pods-LXLazyCells.debug.xcconfig */,
+				E7169E0D1739033AA6656D7D /* Pods-LXLazyCells.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FF7D9E74A93A065768B477A7 /* Frameworks */ = {
+		DEDB397CE5E9829008430DEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53951419E5804FDAF8DDE0A8 /* Pods_LXLazyCells.framework */,
+				7E817C8F03CC26E8F0D839CC /* Pods_LXLazyCells.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,11 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CAEA29B22A9DE3F00DF12B3 /* Build configuration list for PBXNativeTarget "LXLazyCells" */;
 			buildPhases = (
-				821643C129687B72EE568A26 /* [CP] Check Pods Manifest.lock */,
+				8F81D6C6848FE6407BAD9B3D /* [CP] Check Pods Manifest.lock */,
 				0CAEA27822A9DE3E00DF12B3 /* Sources */,
 				0CAEA27922A9DE3E00DF12B3 /* Frameworks */,
 				0CAEA27A22A9DE3E00DF12B3 /* Resources */,
-				0E4B7018AC34697A965E4878 /* [CP] Embed Pods Frameworks */,
+				37565C3FB81BF5F7688A12E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,7 +290,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E4B7018AC34697A965E4878 /* [CP] Embed Pods Frameworks */ = {
+		37565C3FB81BF5F7688A12E2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,7 +312,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LXLazyCells/Pods-LXLazyCells-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		821643C129687B72EE568A26 /* [CP] Check Pods Manifest.lock */ = {
+		8F81D6C6848FE6407BAD9B3D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,7 +356,6 @@
 				0CAE45AB22B731BD00414369 /* LXExtension-Double.swift in Sources */,
 				0CC5AC4D22AAFE2E00DF6ED7 /* NetworkOperation.swift in Sources */,
 				0C2E5AFA22AB3FD300754A86 /* Constants.swift in Sources */,
-				0CA8845322AE214E00285409 /* LXExtension-NSAttributedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +515,7 @@
 		};
 		0CAEA29C22A9DE3F00DF12B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F468E9854F947DDC2017088C /* Pods-LXLazyCells.debug.xcconfig */;
+			baseConfigurationReference = D55B445BFF7F0FEEC1BD2CFD /* Pods-LXLazyCells.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -538,7 +534,7 @@
 		};
 		0CAEA29D22A9DE3F00DF12B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08795886F05E23DE90637AC5 /* Pods-LXLazyCells.release.xcconfig */;
+			baseConfigurationReference = E7169E0D1739033AA6656D7D /* Pods-LXLazyCells.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

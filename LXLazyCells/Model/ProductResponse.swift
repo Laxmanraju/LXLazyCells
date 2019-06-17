@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//Models to decode the reponse data
 struct ProductResponse: Decodable {
     let products : [ProductEntity]
     let totalProducts : Int

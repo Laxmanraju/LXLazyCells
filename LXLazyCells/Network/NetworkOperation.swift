@@ -7,6 +7,11 @@
 //
 
 import Foundation
+
+/*
+ Making o use of Result type to hadle URL response which is introduces in Swift 5
+ Result type is a sucess and failure(error) tuple, configuring sucess as (URLResponse, Data)
+ */
 typealias ResultType = Result<(URLResponse, Data), Error>
 
 class  NetworkOperation: Operation {    
@@ -30,6 +35,9 @@ class  NetworkOperation: Operation {
         }
     }
     
+    /*
+     Asign the URL and completion hadler on intialization
+     */
     init(_ url: URL, completion: @escaping((ProductResponseParser) -> Void)){
         self.url = url
         self.completion = completion
@@ -62,7 +70,10 @@ class  NetworkOperation: Operation {
         sessionTask?.cancel()
     }
 }
-
+/*
+ Making use of the new Result type, dataTask() function is configured to return
+ Result type instead of (Data, URLResponse, Error)
+ */
 extension URLSession {
     func dataTask(with url: URL, result: @escaping (ResultType) -> Void) -> URLSessionDataTask {
         return dataTask(with: url) { (data, reponse, error) in
