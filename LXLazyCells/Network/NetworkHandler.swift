@@ -12,7 +12,7 @@ public typealias ResponseHandler = (((Result<(URLResponse, Data), Error>)) -> Vo
 
 public class NetworkHandler {
 
-    var pageSize = 8
+    var pageSize: Int
     
     init(pageSize: Int) {
         self.pageSize = pageSize

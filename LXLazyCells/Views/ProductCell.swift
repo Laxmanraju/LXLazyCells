@@ -10,14 +10,14 @@ import UIKit
 import Kingfisher
 
 
-protocol  CellOperationConfigurable {
+protocol  ContainerOperationConfigurable {
     func  configure(with product: Product?)
     func  addOperation(updateOp: Operation, dependingOn currOp:Operation)
     func  cancelPendingOperations()
 }
 
 
-class ProductCell: UITableViewCell, CellOperationConfigurable {
+class ProductCell: UITableViewCell, ContainerOperationConfigurable {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var specialDetailsLabel: UILabel!
@@ -25,11 +25,6 @@ class ProductCell: UITableViewCell, CellOperationConfigurable {
     @IBOutlet weak var productImageView: UIImageView!
     
     private weak var operation: Operation?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -49,10 +44,11 @@ class ProductCell: UITableViewCell, CellOperationConfigurable {
         productNameLabel.text = product.productName
         productNameLabel.font = UIFont.LXBook(size: LazyCellConstants.titleFontSize)
         priceLabel.text = product.price
-        priceLabel.font = UIFont.LXBook(size: LazyCellConstants.titleFontSize)
-//        specialDetailsLabel.attributedText = product.shortDescription
-        ratingLabel.text = "Rating \(product.reviewRating)/5 (\(product.reviewCount) \(product.reviewCount > 1 ? "reveiws": "review"))"
-        ratingLabel.font = UIFont.LXLight(size: LazyCellConstants.titleFontSize)
+        priceLabel.font = UIFont.LXBold(size: LazyCellConstants.titleFontSize)
+        specialDetailsLabel.attributedText = product.shortDescription
+        specialDetailsLabel.font = UIFont.LXBook(size: LazyCellConstants.subTitleFontSize)
+        ratingLabel.text = "Rating \(product.reviewRating.getCleanDecimalString())/5 (\(product.reviewCount) \(product.reviewCount > 1 ? "reveiws": "review"))"
+        ratingLabel.font = UIFont.LXBook(size: LazyCellConstants.bodyFontSize)
         productImageView?.kf.setImage(with: product.imageUrl)
         self.setNeedsLayout()
     }
@@ -63,7 +59,6 @@ class ProductCell: UITableViewCell, CellOperationConfigurable {
         specialDetailsLabel.text = " "
         ratingLabel.text = " "
         productImageView.image = nil
-        
     }
     
     func configureWithPlaceHolder()  {

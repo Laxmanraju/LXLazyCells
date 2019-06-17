@@ -15,7 +15,7 @@ class DataController: NSObject {
         case error
     }
     
-    private static let pageSize: Int = 4
+    private static let pageSize: Int = 8
     private let network: NetworkHandler
     public static let sharedDataController = DataController()
     var products: [ProductStatus] = []
@@ -55,15 +55,15 @@ class DataController: NSObject {
         lazyQueue.addOperation(initialOperation)
     }
     
-    func populate(cell : UITableViewCell & CellOperationConfigurable, for index: IndexPath)  {
+    func populateDataFor(container : ContainerOperationConfigurable, for index: IndexPath)  {
         let state = self.fetchState(for: index)
         switch state {
         case .notStarted:
-            cell.configure(with: nil)
+            container.configure(with: nil)
         case .inProgress(_):
-            cell.configure(with: nil)
+            container.configure(with: nil)
         case .loaded(let product):
-            cell.configure(with: product)
+            container.configure(with: product)
         }
         
         switch state {
@@ -76,17 +76,17 @@ class DataController: NSObject {
                     return
                 case .succcess(totalProducts: _, productsList: let products):
                     strongSelf.fetchCompleted(for: index, with: products.map(Product.init))
-                } 
+                }
             }
             markFetchInProgress(for: index, with: currOperation)
             lazyQueue.addOperation(currOperation)
-            let updateOp = self.createUpdateOperation(for: cell, at: index)
-            cell.addOperation(updateOp: updateOp, dependingOn: currOperation)
+            let updateOp = self.createUpdateOperation(for: container, at: index)
+            container.addOperation(updateOp: updateOp, dependingOn: currOperation)
             
         case .inProgress(let currOp):
             print("Cell in progress \(index.row)")
-            let updateOp = self.createUpdateOperation(for: cell, at: index)
-            cell.addOperation(updateOp: updateOp, dependingOn: currOp)
+            let updateOp = self.createUpdateOperation(for: container, at: index)
+            container.addOperation(updateOp: updateOp, dependingOn: currOp)
         case .loaded(_):
             break
             
@@ -116,14 +116,21 @@ class DataController: NSObject {
         products.replaceSubrange(range, with: newProducts.map(ProductStatus.init))
     }
     
-    func createUpdateOperation(for cell: UITableViewCell & CellOperationConfigurable, at index: IndexPath) -> Operation {
+    func createUpdateOperation(for container:  ContainerOperationConfigurable, at index: IndexPath) -> Operation {
         return BlockOperation { [weak self] in
             guard let strongSelf = self ,case .loaded(let product) = strongSelf.fetchState(for: index) else
             {
                 return
             }
-            cell.configure(with: product)
+            container.configure(with: product)
         }
+    }
+    
+    func item(for index: IndexPath) -> Product? {
+        if case .loaded(let product) = fetchState(for: index){
+            return product
+        }
+        return nil
     }
 }
 

@@ -13,11 +13,11 @@
 		0CA8844122ACA39C00285409 /* ProductResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8844022ACA39C00285409 /* ProductResponseParser.swift */; };
 		0CA8844522ACCCF000285409 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8844422ACCCF000285409 /* Product.swift */; };
 		0CA8844A22AD97F200285409 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8844822AD97F200285409 /* ProductCell.swift */; };
-		0CA8844B22AD97F200285409 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA8844922AD97F200285409 /* ProductCell.xib */; };
 		0CA8844F22AE208A00285409 /* LXExtension-UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8844E22AE208A00285409 /* LXExtension-UIFont.swift */; };
 		0CA8845122AE20C300285409 /* LXExtension-UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8845022AE20C300285409 /* LXExtension-UIColor.swift */; };
 		0CA8845322AE214E00285409 /* LXExtension-NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8845222AE214E00285409 /* LXExtension-NSAttributedString.swift */; };
 		0CA8845522AE218000285409 /* LXExtension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8845422AE218000285409 /* LXExtension-String.swift */; };
+		0CAE45AB22B731BD00414369 /* LXExtension-Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE45AA22B731BD00414369 /* LXExtension-Double.swift */; };
 		0CAEA28022A9DE3E00DF12B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEA27F22A9DE3E00DF12B3 /* AppDelegate.swift */; };
 		0CAEA28222A9DE3E00DF12B3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEA28122A9DE3E00DF12B3 /* MasterViewController.swift */; };
 		0CAEA28422A9DE3E00DF12B3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEA28322A9DE3E00DF12B3 /* DetailViewController.swift */; };
@@ -48,11 +48,11 @@
 		0CA8844022ACA39C00285409 /* ProductResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponseParser.swift; sourceTree = "<group>"; };
 		0CA8844422ACCCF000285409 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0CA8844822AD97F200285409 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		0CA8844922AD97F200285409 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		0CA8844E22AE208A00285409 /* LXExtension-UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-UIFont.swift"; sourceTree = "<group>"; };
 		0CA8845022AE20C300285409 /* LXExtension-UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-UIColor.swift"; sourceTree = "<group>"; };
 		0CA8845222AE214E00285409 /* LXExtension-NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-NSAttributedString.swift"; sourceTree = "<group>"; };
 		0CA8845422AE218000285409 /* LXExtension-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-String.swift"; sourceTree = "<group>"; };
+		0CAE45AA22B731BD00414369 /* LXExtension-Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LXExtension-Double.swift"; sourceTree = "<group>"; };
 		0CAEA27C22A9DE3E00DF12B3 /* LXLazyCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXLazyCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAEA27F22A9DE3E00DF12B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CAEA28122A9DE3E00DF12B3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +106,7 @@
 				0CA8845022AE20C300285409 /* LXExtension-UIColor.swift */,
 				0CA8845222AE214E00285409 /* LXExtension-NSAttributedString.swift */,
 				0CA8845422AE218000285409 /* LXExtension-String.swift */,
+				0CAE45AA22B731BD00414369 /* LXExtension-Double.swift */,
 			);
 			path = UICatalog;
 			sourceTree = "<group>";
@@ -161,7 +162,6 @@
 				0CAEA28122A9DE3E00DF12B3 /* MasterViewController.swift */,
 				0CAEA28322A9DE3E00DF12B3 /* DetailViewController.swift */,
 				0CA8844822AD97F200285409 /* ProductCell.swift */,
-				0CA8844922AD97F200285409 /* ProductCell.xib */,
 				0CAEA28522A9DE3E00DF12B3 /* Main.storyboard */,
 			);
 			path = Views;
@@ -278,7 +278,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CAEA28C22A9DE3E00DF12B3 /* LaunchScreen.storyboard in Resources */,
-				0CA8844B22AD97F200285409 /* ProductCell.xib in Resources */,
 				0CAEA28922A9DE3E00DF12B3 /* Assets.xcassets in Resources */,
 				0CAEA28722A9DE3E00DF12B3 /* Main.storyboard in Resources */,
 			);
@@ -357,6 +356,7 @@
 				0CA8843F22AC98EE00285409 /* ProductResponse.swift in Sources */,
 				0CA8844122ACA39C00285409 /* ProductResponseParser.swift in Sources */,
 				0CA8845522AE218000285409 /* LXExtension-String.swift in Sources */,
+				0CAE45AB22B731BD00414369 /* LXExtension-Double.swift in Sources */,
 				0CC5AC4D22AAFE2E00DF6ED7 /* NetworkOperation.swift in Sources */,
 				0C2E5AFA22AB3FD300754A86 /* Constants.swift in Sources */,
 				0CA8845322AE214E00285409 /* LXExtension-NSAttributedString.swift in Sources */,

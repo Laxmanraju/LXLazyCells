@@ -9,10 +9,6 @@
 import Foundation
 typealias ResultType = Result<(URLResponse, Data), Error>
 
-protocol ResponseParsable {
-    init(result:ResultType)
-}
-
 class  NetworkOperation: Operation {    
     private var url: URL
     private var completion: ((ProductResponseParser) -> Void)
@@ -66,7 +62,6 @@ class  NetworkOperation: Operation {
         sessionTask?.cancel()
     }
 }
-
 
 extension URLSession {
     func dataTask(with url: URL, result: @escaping (ResultType) -> Void) -> URLSessionDataTask {

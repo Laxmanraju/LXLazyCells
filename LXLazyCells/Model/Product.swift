@@ -54,6 +54,10 @@ class Product{
         return convertToAttributedHTML(shortDescription)
     }
     
+    var longDescription: NSAttributedString? {
+        guard let longDescription = entity.longDescription else {return nil}
+        return convertToAttributedHTML(longDescription)
+    }
     private func convertToAttributedHTML(_ input: String) -> NSAttributedString? {
         if let inputData = input.data(using: .utf8),
             let attr = try? NSMutableAttributedString(
